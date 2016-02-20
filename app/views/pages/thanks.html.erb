@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title>SMDC Coast Residences</title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+                <%= stylesheet_link_tag    'lp1', media: 'all'%>
+                <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+                <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        </head>
+        <body>
+
+                <!-- Header -->
+                        <section id="header" class="dark">
+                                <header>
+                                    <h1><strong>Thank you</strong> for inquiring about <a href='<%= root_path%>'>Coast Residences</a></h1>
+                                        <p>We will respond to your inquiry shortly, In the meantime... </p>
+                                </header>
+                                <footer>
+                                    <a href="#first" class="button scrolly">Check out our <strong>Top-Selling Properties</strong> below</a>
+                                </footer>
+                        </section>
+
+                <!-- First -->
+                        <section id="first" class="main">
+                                <header>
+                                        <div class="container">
+                                            <h2><strong>2 Top-Selling Properties developed by SM Development Corporation </strong></h2>
+                                        </div>
+                                </header>
+                                <div class="content dark style1 featured">
+                                        <div class="container">
+                                                <div class="row">
+                                                        <div class="12u 12u(narrow)">
+                                                                <section>
+                                                                        <span class="feature-icon"><span class="icon fa-bolt"></span></span>
+                                                                        <header>
+                                                                            <h3><a href='http://www.mybesthaven.com/lp/shore-2-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page'>Shore 2 Residences</a> - A Private Island called HOME</h3>
+                                                                        </header>
+                                                                        <p>Everything is within reach - from numerous shopping and dining selection of <a href='https://en.wikipedia.org/wiki/SM_Mall_of_Asia' target='_blank'>SM Mall of Asia</a> to the thriving array of activities and attractions in the <a href='https://en.wikipedia.org/wiki/Entertainment_City' target='_blank'>Entertainment City</a>. A mid-rise, four-tower residential condominium that has a personal resort and entire amenity extends outside to MOA and surrounding parks and commercial areas where everyday is a vacation.
+                                            </p>
+                                                                        <p>Click image to view property detail</p>
+                                                                        <a href="http://www.mybesthaven.com/lp/shore-2-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page" class="image fit"><img src="<%= image_path("shore-2-residences-building-perspective.jpg")%>" alt="Shore 2 Residences Building Perspective" title='Shore 2 Residences Building Perspective' /></a>
+                                                                </section>
+                                                        </div>
+                                                        <div class="12u 12u(narrow)">
+                                                                <section>
+                                                                        <span class="feature-icon"><span class="icon fa-bolt"></span></span>
+                                                                        <header>
+                                                                            <h3><a href='http://www.mybesthaven.com/lp/air-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page'>Air Residences</a> - Nothing says you’ve made it quite like a Makati Address.</h3>
+                                                                        </header>
+                                                                        <p><a href='http://www.mybesthaven.com/lp/air-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page'><strong>Air Residences</strong></a> gives you a privileged lifestyle combining a convenient location with the luxurious comfort of its signature amenities. Located within the Philippines’ premier business and financial district, <a href='http://www.mybesthaven.com/lp/air-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page'><strong>Air Residences</strong></a> brings you to the doorstep of success.</p>
+                                                                        <p>Click image to view property detail</p>
+                                                                        <a href="http://www.mybesthaven.com/lp/air-residences?utm_source=thecoastresidences&utm_medium=website&utm_campaign=thank_you_page" class="image fit"><img src="<%= image_path("air-residences-building-perspective.jpg")%>" alt="Air Residences Building Perpective" title="Air Residences Building Perspective" /></a>
+                                                                </section>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+
+                <!-- Footer -->
+                        <section id="footer">
+                                <div class="content style4 featured">
+                                        <div class="container 50%">
+                                            <p>HLURB TLS ENCRFO 16-01-004</p>
+                                            <p>Location: Roxas Blvd., Brgy. San Rafael, Pasay City, Philippines</p>
+                                            <p>Completion Date: 1st Quarter 2020</p>
+                                            <p>Owner & Developer: SM Development Corporation</p>
+                                            <div class='container 25%'>
+                                            <a href="#reserve" class="image fit button scrolly"><img src="<%= image_path("smdc-premier-logo.jpg")%>" alt="" /></a>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="copyright">
+                                        <ul class="menu">
+                                            <li>&copy; TheCoastResidences. All rights reserved.</li>
+                                        </ul>
+                                </div>
+                        </section>
+
+                <!-- Scripts -->
+    <%= javascript_include_tag 'application' %>
+                        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
+        </body>
+</html>
