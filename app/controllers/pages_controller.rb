@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @inquiry = Inquiry.new
-    @desc = "Situated in Roxas Boulevard, Coast Residences gives grand views of the Manila Bay Sunset and the Metro Manila Cityscape. Reserve your unit for Php25,000.00."
+    @desc = "SMDC Coast Residences is situated in Roxas Boulevard, Pasay City. 3.6km away from SM Mall of Asia. Pre-selling Condos. 0% Interest. Php25,000 Reservation Fee."
     @title = "Coast Residences, Roxas Boulevard, Pasay City"
 
     @unit_types = [
