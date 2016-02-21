@@ -1,13 +1,9 @@
 class InquiryMailer < ApplicationMailer
 
-  def send_email(inquiry_id)
-    @inquiry = Inquiry.where(id: inquiry_id).first
-
-    if @inquiry
-      mail(to: ENV['RECIPIENT_EMAIL'],
-         subject: @inquiry.unit_type,
-         from: @inquiry.email)
-    end
+  def send_email(inquiry_params)
+    mail(to: ENV['RECIPIENT_EMAIL'],
+       subject: inquiry_params[:unit_type],
+       from: inquiry_params[:email])
   end
 
 end

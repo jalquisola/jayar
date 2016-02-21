@@ -4,8 +4,9 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(inquiry_params)
 
     respond_to do |format|
+      InquiryMailer.send_email(inquiry_params).deliver_now
+
       if @inquiry.save
-        InquiryMailer.send_email(@inquiry.id).deliver_now
         format.html do
           redirect_to thanks_path
         end
