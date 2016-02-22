@@ -248,5 +248,36 @@
    });
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "Coast Residences",
+  "image": "<%= image_url('coast-residences-pool.jpg')%>",
+  "description": "<%= @desc%>",
+  "mpn": "HLURB TLS ENCRFO 16-01-004",
+  "brand": {
+    "@type": "Thing",
+    "name": "SMDC"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "89"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "PHP",
+    "price": "2.9M",
+    "itemCondition": "http://schema.org/NewCondition",
+    "availability": "http://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "SMDC"
+    }
+  }
+}
+</script>
+
         </body>
 </html>
