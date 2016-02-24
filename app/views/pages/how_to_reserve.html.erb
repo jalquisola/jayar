@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title>How to Reserve a Unit | TheCoastResidences</title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+                <%= stylesheet_link_tag    'lp1', media: 'all'%>
+                <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+                <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        </head>
+        <body>
+
+                <!-- Header -->
+                        <section id="header" class="dark">
+                                <header>
+                                    <h1>
+                                      How to Reserve a Coast Residences Unit
+                                    </h1>
+                                </header>
+                        </section>
+
+                        <section id="reserve" class="main">
+                                <header>
+                                        <div class="container">
+                                                <h2>First, you need to sign Reservation Form</h2>
+<p> To assist you properly, kindly provide us your unit preference and we will send you necessary documents through email.</p>
+                                        </div>
+                                </header>
+                                <div class="content style4 featured">
+                                        <div class="container 50%">
+                                            <%= form_for @inquiry do |f|%>
+                                                <div class="row" >
+                                                    <div class="12u 12u(mobile)">
+                                                        <%= f.email_field :email, placeholder: 'Enter a valid email'%>
+                                                    </div>
+                                                    <div class="12u 12u(mobile)">
+                                                        <div class='select' tabindex='-1'>
+                                                           <%= f.select(:unit_type) do%>
+                                                               <% @unit_types.each do |unit_type|%>
+                                                                   <%= content_tag(:option, unit_type, value: unit_type) %>
+                                                               <% end %>
+                                                           <%end%>
+                                                        </div>
+                                                    </div>
+                                                    <div class="12u 12u(mobile)">
+                                                        <input type="submit" id="button1" value="Get Reservation Form"/>
+                                                    </div>
+                                                </div>
+                                            <% end %>
+
+                                        </div>
+                                </div>
+                        </section>
+
+                <!-- Footer -->
+                        <%= render partial: 'pages/footer'%>
+
+                <!-- Scripts -->
+    <%= javascript_include_tag 'application' %>
+                        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <%= render partial: 'pages/google_analytics'%>
+
+        </body>
+</html>
