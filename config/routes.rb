@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#home"
+  root "pages#profile"
   get :thanks, to: 'pages#thanks'
   resources :inquiries, only: [:create]
 

@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     render :home, layout: false
   end
 
+  def profile
+    render :profile, layout: false
+  end
+
   def how_to_reserve
     @inquiry = Inquiry.new
     render :how_to_reserve, layout: false
