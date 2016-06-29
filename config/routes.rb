@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get :thanks, to: 'pages#thanks'
   resources :inquiries, only: [:create]
 
+  get "amp", to: "pages#amp"
   get "terms-of-service", to: "pages#terms_of_service"
   get "privacy-policy", to: "pages#privacy_policy"
   get "about-smdc", to: "pages#about_smdc"
