@@ -1,11 +1,28 @@
 class PagesController < ApplicationController
-  before_action :set_unit_types, only: [:home, :how_to_reserve, :contact_us]
+  before_action :set_unit_types, only: [:home, :how_to_reserve, :contact_us,
+    :s_residences, :smdc]
   def home
     @inquiry = Inquiry.new
     @desc = "SMDC Coast Residences is situated in Roxas Boulevard, Pasay City. 3.6km away from SM Mall of Asia. Pre-selling Condos. 0% Interest. Php20,000 Reservation Fee."
     @title = "Coast Residences, Roxas Boulevard, Pasay City"
 
     render :home, layout: false
+  end
+
+  def smdc
+    @inquiry = Inquiry.new
+    @desc = "SMDC Coast Residences is situated in Roxas Boulevard, Pasay City. 3.6km away from SM Mall of Asia. Pre-selling Condos. 0% Interest. Php20,000 Reservation Fee."
+    @title = "Coast Residences, Roxas Boulevard, Pasay City"
+
+    render :smdc, layout: false
+  end
+
+  def s_residences
+    @inquiry = Inquiry.new
+    @desc = "S Residences is an SMDC premiere residential condominium project in Mall of Asia Complex, Passy City. Pre-selling Condos. 0% Interest. Php25,000 Reservation Fee."
+    @title = "SMDC S Residences, Mall of Asia Complex, Pasay City"
+
+    render :s_residences, layout: false
   end
 
   def how_to_reserve

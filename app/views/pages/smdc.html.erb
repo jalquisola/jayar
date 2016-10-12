@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title><%= @title%></title>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="google-site-verification" content="<%= ENV['GOOGLE_SITE_VERIFICATION']%>" />
+                <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic" type="text/css"/>
+                <%= stylesheet_link_tag 'lp1', media: 'all'%>
+                <%= csrf_meta_tags %>
+                <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+                <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+                <meta property="fb:app_id" content="<%= ENV['FACEBOOK_APP_ID']%>" />
+
+                <% image_url = image_url("coast-residences-pool.jpg") %>
+                <meta property="og:url" content="<%= root_url %>">
+                <meta property="og:description" content="<%= @desc%>" >
+                <meta property="og:image" content="<%= image_url%>">
+                <meta property="og:type"          content="website" />
+                <meta property="og:title"         content='<%= @title%>' />
+                <meta name='description'  content="<%= @desc%>">
+                <meta name='twitter:card' content='summary_large_image'>
+                <meta name='twitter:site' content="<%= ENV['TWITTER_SITE'] %>">
+                <meta name='twitter:title' content="<%= @title%>">
+                <meta name='twitter:description'  content="<%= @desc %>">
+                <meta name="twitter:image" content="<%= image_url%>">
+
+        </head>
+        <body>
+
+                <!-- Header -->
+                        <section id="header" class="dark">
+                                <header>
+                                    <h1>Own a unit at <strong>SMDC Coast Residences</strong> for as low as <br><strong>Php 9,000/month</strong></h1>
+                                        <p>Live in an address where business meets pleasure, where business suits and swim suits are both on-trend</p>
+                                </header>
+                                <footer>
+                                        <a href="#first" class="button scrolly">Project Overview</a>
+                                </footer>
+                        </section>
+
+                <!-- First -->
+                        <section id="first" class="main">
+                                <header>
+                                        <div class="container">
+                                            <h2>New views await you at <strong>Coast Residences</strong>, the newest SMDC Premier Development</h2>
+                                            <p>Situated in Roxas Boulevard, <i>Coast Residences</i> gives grand views of the Manila Bay Sunset and the <a href='https://en.wikipedia.org/wiki/Metro_Manila' target='_blank'>Metro Manila</a> Cityscape. With a stunning exterior design and interiors inspired by Bali’s top hotels, <a href='<%= root_path%>'>Coast Residences</a> gives you a new view on premier condo living.</p>
+                                        </div>
+
+                                </header>
+                        </section>
+                        <section class="main">
+                                <div class="content style1 dark">
+                                    <div class="container">
+                                        <section>
+                                                <header>
+                                                        <h3>SMDC Coast  Residences Overview</h3>
+                                                </header>
+                                                <div class="table-wrapper">
+                                                        <table class="default">
+                                                                <tbody>
+                                                                        <tr>
+                                                                                <td>Project Location:</td>
+                                                                                <td>Roxas Boulevard, Pasay City</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Turnover Date:</td>
+                                                                                <td>3rd Quarter 2020</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Unit Sizes:</td>
+                                                                                <td>20sqm - 66sqm</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Number of Floors:</td>
+                                                                                <td>41</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>Number of Units:</td>
+                                                                                <td>2,197</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+                                        </section>
+                                        <section>
+                                                <header>
+                                                        <h3>SMDC Coast  Residences Overview</h3>
+                                                </header>
+                                                <div class="table-wrapper">
+                                                        <table class="default">
+                                                                <thead>
+                                                                        <tr>
+                                                                                <th>ID</th>
+                                                                                <th>Name</th>
+                                                                                <th>Description</th>
+                                                                                <th>Price</th>
+                                                                        </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                                <td>00001</td>
+                                                                                <td>Lorem ipsum dolor</td>
+                                                                                <td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+                                                                                <td>29.99</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>00002</td>
+                                                                                <td>Sit amet nullam</td>
+                                                                                <td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+                                                                                <td>19.99</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>00003</td>
+                                                                                <td>Feugiat felis viverra</td>
+                                                                                <td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+                                                                                <td>29.99</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>00004</td>
+                                                                                <td>Sagittis enim felis</td>
+                                                                                <td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+                                                                                <td>19.99</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                                <td>00005</td>
+                                                                                <td>Nullam sed vestibulum</td>
+                                                                                <td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+                                                                                <td>19.99</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                        <tr>
+                                                                                <td colspan="3"></td>
+                                                                                <td>100.00</td>
+                                                                        </tr>
+                                                                </tfoot>
+                                                        </table>
+                                                </div>
+                                        </section>
+                                    </div>
+                                </div>
+                        </section>
+
+                <!-- Second -->
+                        <section id="second" class="main">
+                                <header>
+                                        <div class="container">
+                                                <h2>More about the Coast Residences</h2>
+                                                <p><strong>Coast Residences</strong> is surrounded by reflections of Manila’s dynamic cultural mix. Amazing expressions of world class theatre, ballet, opera, music, and more, take the stage at The Cultural Center of the Philippines, a few minutes away from the development. To the west of the development, is the magical sunset of Manila Bay where one can enjoy the perfect stroll along the Baywalk or night out aboard <a href='http://www.manilayachtclub.com.ph/' target='_blank'> The Manila Yacht Club</a> cruise. Galleries, studios, and exhibits fill nearby <a href='https://en.wikipedia.org/wiki/Intramuros' target='_blank'>Intramuros</a>, Manila’s historic core. Travel southwards and bring entertainment and amusement to the optimum level, with theme-park <a href='http://www.starcity.com.ph/' target='_blank'>Star City</a>, concert-hall <a href='https://mallofasia-arena.com/' target='_blank'>SM Arena</a>, and international shopping destination,<a href='https://en.wikipedia.org/wiki/SM_Mall_of_Asia' target='_blank'> SM Mall of Asia.</a></p>
+                                        </div>
+                                </header>
+                                <div class="content dark style2 featured">
+                                        <div class="container">
+                                                <div class="row">
+                                                        <div class="12u 12u(narrow)">
+                                                                <section>
+                                                                    <h3><strong>Coast Residences</strong>: Features and Amenities</h3>
+                                                                        <p>The opulent lobby, with its granite porcelain floors, ambient-mood lighting, inspired design details, and friendly front desk service redefines luxury living while providing a warm welcome to residents and guests.</p>
+                                                                        <a href="#" class="image fit"><img src="<%= image_path("coast-residences-lobby.jpg")%>" alt="Coast Residences Lobby" name='Coast Residences Lobby' /></a>
+                                                                        <br/>
+                                                                        <p>Each space in <strong>Coast Residences</strong> hosts a harmony of inspiring sights and indescribable refinement that provides both a sophisticated atmosphere and a relaxing environment.</p>
+                                                                        <a href="#" class="image fit"><img src="<%= image_path("coast-residences-penthouse-lounge.jpg")%>" alt="Coast Residences Penthouse" name="Coast Residences Penthouse" /></a>
+                                                                        <br/>
+                                                                        <p>An exclusive Sunset Lounge with a Game Room for residents are designed with floor-to-ceiling windows allowing natural light to fill the spaces and affording one panoramic views of the Makati's dazzling city sights and Mall of Asia's splendid fireworks display.</p>
+                                                                        <a href="#" class="image fit"><img src="<%= image_path("coast-residences-amenity-area.jpg")%>" alt="Coast Residences Amenity Area" name="Coast Residences Amenity Area"/></a>
+                                                                        <br/>
+                                                                        <p><strong>Coast Residences</strong> embraces the full beauty of its watefront location with a breathtaking pool and view deck facing Manila Bay, for truly distinct leisurely moments everyday.</p>
+                                                                        <a href="#" class="image fit"><img src="<%= image_path("coast-residences-pool.jpg")%>" alt="Coast Residences Pool" name="Coast Residences Pool"/></a>
+                                                                        <br/>
+                                                                        <a href="#" class="image fit"><img src="<%= image_path("coast-residences-building-layout.jpg")%>" alt="Coast Residences Building Layout" name="Coast Residences Building Layout" /></a>
+                                                                        <footer>
+                                                                                <a href="#reserve" class="button scrolly">Inquire Now</a>
+                                                                        </footer>
+                                                                </section>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+
+                <!-- Third -->
+                        <section id="third" class="main">
+                                <header>
+                                        <div class="container">
+                                                <h2>Location</h2>
+                                                <a href="#reserve" class="image fit"><img src="<%= image_path("coast-residences-map.png")%>" alt="" /></a>
+                                        </div>
+                                </header>
+                                <div class="content dark style3 featured">
+                                        <div class="container">
+                                            <header><h2>Choose from different types of units in Coast Residences Unit Types</h2>
+                                                </header>
+                                                <div class="row">
+                                                        <div class="12u 12u(narrow)">
+                                                                <h3>Family Suite A With Balcony Model unit</h3>
+                                                                <p>Enjoy an unbreathable setting with the dazzling city sights of the Makati City skyline right from your balcony. This unit has a flex area that may be converted to an office or workshop space so you can run the family business or work from home.</p>
+                                                                <a href="#reserve" class="image fit"><img src="<%= image_path("coast-residences-family-suite-unit.jpg")%>" alt="Coast Residences Family Suite Unit" name="Coast Residences Family Suite Unit"/></a>
+                                                        </div>
+                                                        <div class="12u 12u(narrow)">
+                                                                <h3>Family Suite B With Balcony Model Unit</h3>
+
+                                                                <p>The comfort of your home combined with Coast Residences' pool waters and skyline views provide a revitalizing atmosphere. Convert your flex area to an interactive play room where you can bond with the kids after an afternoon weekend swim.</p>
+                                                                <a href="#reserve" class="image fit"><img src="<%= image_path("coast-residences-family-suite-b-unit.jpg")%>" alt="Coast Residences Family Suite B Unit" name="Coast Residences Family Suite B Unit"/></a>
+                                                        </div>
+                                                        <div class="12u 12u(narrow)">
+                                                                <h3>1 Bedroom With Balcony Model unit</h3>
+
+                                                                <p>From your bedroom balcont, enjoy Manila Bay's claim to fame: breathtaking views of the sunset and beyond. Perfect for a relaxed stay-at-home evening after a busy week at work</p>
+                                                                <a href="#reserve" class="image fit"><img src="<%= image_path("coast-residences-one-bedroom-model-unit.jpg")%>" alt="Coast Residences 1-Bedroom Model Unit" name="Coast Residences 1-Bedroom Model Unit"/></a>
+                                                        </div>
+                                                        <div class="12u 12u(narrow)">
+                                                                <h3>Two-Bedroom Penthouse Model Unit</h3>
+                                                                <p>High above the buzzing city, the lower and upper penthouse units are situated on the 40th and 41st floors of the development to offer romantic views of the city's iconic Manila Bay and Yacht Club. Stay-at-home weekends become more special as you indulge in magical sunsets with your loved ones.</p>
+                                                                <a href="#reserver" class="image fit"><img src="<%= image_path("coast-residences-two-bedroom-penthouse.jpg")%>" alt="Coast Residences 2-Bedroom Penthouse" name="Coast Residences 2-Bedroom Penthouse"/></a>
+                                                                <footer>
+                                                                        <a href="#reserve" class="button scrolly">Inquire Now</a>
+                                                                </footer>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+
+                <!-- Fourth -->
+                        <section id="reserve" class="main">
+                                <header>
+                                        <div class="container">
+                                                <h2>Fill up the form below, for inquiries and reservations.</h2>
+                                        </div>
+                                </header>
+                                <div class="content style4 featured">
+                                        <div class="container 50%">
+                                            <%= form_for @inquiry do |f|%>
+                                                <div class="row" >
+                                                    <div class="12u 12u(mobile)">
+                                                        <%= f.email_field :email, placeholder: 'Enter a valid email'%>
+                                                    </div>
+                                                    <div class="12u 12u(mobile)">
+                                                        <div class='select' tabindex='-1'>
+                                                           <%= f.select(:unit_type) do%>
+                                                               <% @unit_types.each do |unit_type|%>
+                                                                   <%= content_tag(:option, unit_type, value: unit_type) %>
+                                                               <% end %>
+                                                           <%end%>
+                                                        </div>
+                                                    </div>
+                                                    <div class="12u 12u(mobile)">
+                                                        <input type="submit" id="button1" value="Inquire Now"/>
+                                                    </div>
+                                                </div>
+                                            <% end %>
+
+                                        </div>
+                                </div>
+                        </section>
+
+                        <%= render partial: 'pages/footer'%>
+                <!-- Scripts -->
+                <%= javascript_include_tag 'application' %>
+                <!-- Facebook Pixel Code -->
+                <script>
+                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','//connect.facebook.net/en_US/fbevents.js');
+                fbq('init', "<%= ENV['FACEBOOK_PIXEL']%>");
+                fbq('track', "PageView");
+                </script>
+                <noscript><img height="1" width="1" style="display:none"
+                    src="https://www.facebook.com/tr?id=<%=ENV['FACEBOOK_PIXEL']%>&ev=PageView&noscript=1"
+                /></noscript>
+                <!-- End Facebook Pixel Code -->
+                        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <%= render partial: 'pages/google_analytics'%>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "S Residences",
+  "image": "<%= image_url('coast-residences-pool.jpg')%>",
+  "description": "<%= @desc%>",
+  "mpn": "HLURB TLS ENCRFO 16-01-004",
+  "brand": {
+    "@type": "Thing",
+    "name": "SMDC"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "89"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "PHP",
+    "price": "2.9M",
+    "itemCondition": "http://schema.org/NewCondition",
+    "availability": "http://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "SMDC"
+    }
+  }
+}
+</script>
+
+        </body>
+</html>
