@@ -1,0 +1,156 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://www.thecoastresidences.com/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!--
+    Additionally used AMP components must be imported in the header.
+    -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <%= render partial: "amp_default_css" %>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    </head>
+    <body>
+       <article>
+        <h4>
+            <amp-fit-text width="300" height="45" layout="responsive" max-font-size="45">
+                SMDC Coast Residences
+            </amp-fit-text>
+        </h4>
+        <amp-img src="<%= image_path("coast-residences-pool.jpg")%>" width="800" height="450" alt="Coast Residences Pool" layout="responsive"></amp-img>
+        <h4 class="price-description">Own a unit for as low as Php 9,500.00</h4>
+        <p id="housing-description">Situated in Roxas Boulevard, Coast Residences gives grand views of the Manila Bay Sunset and the Metro Manila Cityscape. With a stunning exterior design and interiors inspired by Bali’s top hotels, Coast Residences gives you a new view on premier condo living.</p>
+       </article>
+    <div>
+      <amp-accordion>
+        <section expanded>
+          <h4>Model Units</h4>
+          <amp-carousel width="512" controls height="384" layout="responsive" type="slides" autoplay delay="5000">
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-family-suite-unit.jpg")%>" width="800" height="450" alt="Coast Residences Family Suite Unit" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Family Suite Unit
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                 <amp-img src="<%= image_path("coast-residences-family-suite-b-unit.jpg")%>" width="800" height="450" alt="Coast Residences Family Suite B Unit" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Family Suite B Unit
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-one-bedroom-model-unit.jpg")%>" width="800" height="450" alt="Coast Residences 1-Bedroom Model Unit" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences 1-Bedroom Unit
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-two-bedroom-penthouse.jpg")%>" width="800" height="450" alt="Coast Residences 2-Bedroom Penthouse" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences 2-Bedroom Penthouse Unit
+                </amp-fit-text>
+              </div>
+          </amp-carousel>
+        </section>
+        <section>
+          <h4>SMDC Coast Residences Project Overview</h4>
+          <ul class="description">
+            <li>Project Location: Roxas Boulevard, Pasay City, Philippines</li>
+            <li>Turnover Date: 2020</li>
+            <li>Unit Sizes: 20sqm-66sqm</li>
+            <li>Single Tower with 41 floors</li>
+          </ul>
+        </section>
+        <section>
+          <h4>View on map</h4>
+          <amp-img src="<%= image_path("coast-residences-map.png")%>" width="800" height="450" alt="Coast Residences Map" layout="responsive"></amp-img>
+        </section>
+        <section>
+          <h4>Site Development Plan</h4>
+            <amp-img src="<%= image_path("coast-residences-building-layout.jpg")%>" width="800" height="450" alt="Coast Residences Building Layout" layout="responsive"></amp-img>
+        </section>
+        <section>
+          <h4>Amenities</h4>
+          <amp-carousel width="512" controls height="384" layout="responsive" type="slides" autoplay delay="5000">
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-amenity-area.jpg")%>" width="800" height="450" alt="Coast Residences Amenity Area" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Amenity Area
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-lobby.jpg")%>" width="800" height="450" alt="Coast Residences Lobby" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Lobby
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-pool.jpg")%>" width="800" height="450" alt="Coast Residences Pool" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Swimming Pool
+                </amp-fit-text>
+              </div>
+              <div class="slide">
+                <amp-img src="<%= image_path("coast-residences-game-room.jpg")%>" width="800" height="450" alt="Coast Residences Game Room" layout="responsive"></amp-img>
+                <amp-fit-text class="text-align-center" width="800" height="30" layout="responsive">
+                   Coast Residences Game Room
+                </amp-fit-text>
+              </div>
+          </amp-carousel>
+        </section>
+        <section>
+          <h4>SMDC Coast Residences Facilities</h4>
+          <ul class="description">
+            <li>8 elevators(up to 39th Floor, 2 elevators at the penthouse lobby</li>
+            <li>Over 1,000sqm for Commercial Space</li>
+            <li>24-Hour Security</li>
+            <li>Automatic Fire Sprinkler System</li>
+            <li>Centralized Mailroom System</li>
+            <li>Centralized Garbage Collection and Disposal System</li>
+            <li>Standby Generator for Common Areas and Selected Residential Outlets</li>
+            <li>Provision for Telecom and Cabel Lines</li>
+            <li>Intercom System</li>
+            <li>CCTV System</li>
+            <li>Property Management Services</li>
+          </ul>
+        </section>
+        <section expanded>
+            <h4 class="contact-heading"> Do you like this property?</h4>
+            <div class="contact-section">
+                <div class="contact">
+                    <a href="tel:012 3456789" class="button button-primary call-to-action">Call agent</a>
+                    <a href="mailto:someone@example.com" class="button button-primary call-to-action">Email agent</a>
+                </div>
+            </div>
+        </section>
+      </amp-accordion>
+    </div>
+
+    <amp-analytics type="googleanalytics">
+      <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-73836974-1"
+            },
+            "triggers": {
+                "default pageview": {
+                    "on": "visible",
+                    "request": "pageview",
+                    "vars": {
+                        "title": "Housing"
+                    }
+                }
+            }
+        }
+      </script>
+    </amp-analytics>
+</body>
+</html>

@@ -13,6 +13,10 @@ class PagesController < ApplicationController
     render :how_to_reserve, layout: false
   end
 
+  def home_amp
+    render :amp, layout: false
+  end
+
   def contact_us
     @inquiry = Inquiry.new
     render :contact_us, layout: false
