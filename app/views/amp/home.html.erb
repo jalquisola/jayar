@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <link rel="canonical" href="https://www.thecoastresidences.com/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <!--
-    Additionally used AMP components must be imported in the header.
-    -->
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
@@ -14,18 +11,68 @@
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
-    <%= render partial: "amp_default_css" %>
+    <meta property="fb:app_id" content="<%= ENV['FACEBOOK_APP_ID']%>" />
+
+    <% image_url = image_url("coast-residences-pool.jpg") %>
+    <meta property="og:url" content="https://www.thecoastresidences.com">
+    <meta property="og:description" content="<%= @desc%>" >
+    <meta property="og:image" content="<%= image_url%>">
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content='<%= @title%>' />
+    <meta name='description'  content="<%= @desc%>">
+    <meta name='twitter:card' content='summary_large_image'>
+    <meta name='twitter:site' content="<%= ENV['TWITTER_SITE'] %>">
+    <meta name='twitter:title' content="<%= @title%>">
+    <meta name='twitter:description'  content="<%= @desc %>">
+    <meta name="twitter:image" content="<%= image_url%>">
+
+    <%= render partial: "default_css" %>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "mainEntityofPage": "https://www.thecoastresidences.com"
+      "name": "Coast Residences",
+      "image": "<%= image_url('coast-residences-pool.jpg')%>",
+      "description": "<%= @desc%>",
+      "mpn": "HLURB TLS ENCRFO 16-01-004",
+      "brand": {
+        "@type": "Thing",
+        "name": "SMDC"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "89"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "PHP",
+        "price": "2.9M",
+        "itemCondition": "http://schema.org/NewCondition",
+        "availability": "http://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "SMDC"
+        }
+      }
+    }
+    </script>
     </head>
     <body>
-       <article>
+       <article class="text-align-center">
         <h4>
+           <a id="logo" href="/">
+              <amp-img src="<%= image_path("smdc-premiere-logo.png")%>" width="160" height="90" alt="Coast Residences Pool"></amp-img>
+           </a>
+
             <amp-fit-text width="300" height="45" layout="responsive" max-font-size="45">
                 SMDC Coast Residences
             </amp-fit-text>
         </h4>
-        <amp-img src="<%= image_path("coast-residences-pool.jpg")%>" width="800" height="450" alt="Coast Residences Pool" layout="responsive"></amp-img>
         <h4 class="price-description">Own a unit for as low as Php 9,500.00</h4>
         <p id="housing-description">Situated in Roxas Boulevard, Coast Residences gives grand views of the Manila Bay Sunset and the Metro Manila Cityscape. With a stunning exterior design and interiors inspired by Bali’s top hotels, Coast Residences gives you a new view on premier condo living.</p>
        </article>
@@ -61,7 +108,7 @@
           </amp-carousel>
         </section>
         <section>
-          <h4>SMDC Coast Residences Project Overview</h4>
+          <h4>Project Overview</h4>
           <ul class="description">
             <li>Project Location: Roxas Boulevard, Pasay City, Philippines</li>
             <li>Turnover Date: 2020</li>
@@ -107,7 +154,7 @@
           </amp-carousel>
         </section>
         <section>
-          <h4>SMDC Coast Residences Facilities</h4>
+          <h4>Facilities</h4>
           <ul class="description">
             <li>8 elevators(up to 39th Floor, 2 elevators at the penthouse lobby</li>
             <li>Over 1,000sqm for Commercial Space</li>
@@ -123,34 +170,41 @@
           </ul>
         </section>
         <section expanded>
-            <h4 class="contact-heading"> Do you like this property?</h4>
+            <h4 class="contact-heading"> Get your Unit Quotation?</h4>
             <div class="contact-section">
-                <div class="contact">
-                    <a href="tel:012 3456789" class="button button-primary call-to-action">Call agent</a>
-                    <a href="mailto:someone@example.com" class="button button-primary call-to-action">Email agent</a>
+                <div class="contact text-align-center">
+                    <a href="tel:+6597919534" class="button button-primary call-to-action">Call us!</a>
+                    <a href="mailto:thecoastresidences@gmail.com" class="button button-primary call-to-action">Send us Email!</a>
                 </div>
             </div>
         </section>
       </amp-accordion>
     </div>
+    <footer class="text-align-center">
+        <p class="text-align-center">HLURB TLS ENCRFO 16-01-004</p>
+        <p class="text-align-center">Completion Date: 1st Quarter 2020</p>
+        <p class="text-align-center">Owner & Developer: SM Development Corporation</p>
+        <amp-img src="<%= image_path("smdc-premiere-logo.png")%>" width="160" height="90" alt="Coast Residences Pool"></amp-img>
+    </footer>
 
     <amp-analytics type="googleanalytics">
       <script type="application/json">
         {
             "vars": {
-                "account": "UA-73836974-1"
+                "account": "<%= ENV['GOOGLE_ANALYTICS_TRACKING_ID']%>"
             },
             "triggers": {
                 "default pageview": {
                     "on": "visible",
                     "request": "pageview",
                     "vars": {
-                        "title": "Housing"
+                        "title": "Coast Residences AMP"
                     }
                 }
             }
         }
       </script>
     </amp-analytics>
+
 </body>
 </html>

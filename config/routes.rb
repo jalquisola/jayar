@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "privacy-policy", to: "pages#privacy_policy"
   get "about-smdc", to: "pages#about_smdc"
   get "how-to-reserve", to: "pages#how_to_reserve"
-  get "amp.html", to: "pages#home_amp"
+  resources :amp
 end
