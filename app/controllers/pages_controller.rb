@@ -1,21 +1,20 @@
 class PagesController < ApplicationController
   before_action :set_unit_types, only: [:home, :how_to_reserve, :contact_us]
+  layout false
+
   def home
     @inquiry = Inquiry.new
     @desc = "SMDC Coast Residences is situated in Roxas Boulevard, Pasay City. 3.6km away from SM Mall of Asia. Pre-selling Condos. 0% Interest. Php20,000 Reservation Fee."
     @title = "Coast Residences, Roxas Boulevard, Pasay City"
 
-    render :home, layout: false
   end
 
   def how_to_reserve
     @inquiry = Inquiry.new
-    render :how_to_reserve, layout: false
   end
 
   def contact_us
     @inquiry = Inquiry.new
-    render :contact_us, layout: false
   end
 
   private
